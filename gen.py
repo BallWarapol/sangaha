@@ -11,7 +11,7 @@ for fn in glob.glob(p+"*.htm"):
 	c+=1
 	with open(fn, "r+") as f:
 		data = f.read()
-		data=data.replace("<body>","""<body><script type="text/javascript" id="cool_find_script" src="find6.js"></script><style>.highlight{	background-color: blue;}.find_selected{	background-color: green;}</style>""")
+		data=data.replace("<body>","""<body>source: <a href="http://www.palikanon.com/english/sangaha/sangaha.htm">http://www.palikanon.com/english/sangaha/sangaha.htm</a><script type="text/javascript" id="cool_find_script" src="find6.js"></script><style>.highlight{	background-color: blue;}.find_selected{	background-color: green;}</style>""")
 		data=data.replace("../../","")
 		data=data.replace("../images/","")
 		data=data.split("<hr>")
